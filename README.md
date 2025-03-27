@@ -1,0 +1,4 @@
+Model trained on dataset on kaggle: Best Artworks of All Time (https://www.kaggle.com/datasets/ikarus777/best-artworks-of-all-time/data).
+The model consists of three convolutional layers with increasing filter sizes (64, 128, 256), followed by max-pooling layers to reduce dimensionality. Fully connected layers were used at the final stage, with the last layer corresponding to the number of artists in the dataset. We applied ReLU activation across all layers to introduce non-linearity, and the model was trained using the Adam optimizer with a learning rate of 0.001 and a cross-entropy loss function, all of which is also standard for multi-class classification tasks. Training was conducted using a batch size of 32 over 15 epochs, and the model utilized GPU acceleration via CUDA when available.
+
+The model took about 5hrs to train on GPU on kubernetes. 
